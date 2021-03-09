@@ -10,7 +10,7 @@ import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
 import PortisIcon from '../../assets/images/portisIcon.png'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
 import LatticeIcon from '../../assets/images/gridPlusWallet.png'
-import { fortmatic, injected, portis, walletconnect, walletlink, lattice } from '../../connectors'
+import { fortmatic, injected, portis, walletconnect, walletlink, lattice, torus } from '../../connectors'
 import { NetworkContextName } from '../../constants'
 import useENSName from '../../hooks/useENSName'
 import { useHasSocks } from '../../hooks/useSocksBalance'
@@ -144,6 +144,12 @@ function StatusIcon({ connector }: { connector: AbstractConnector }) {
     return (
       <IconWrapper size={16}>
         <img src={LatticeIcon} alt={'Lattice'} />
+      </IconWrapper>
+    )
+  } else if (connector === torus) {
+    return (
+      <IconWrapper size={16}>
+        <img src={LatticeIcon} alt={'Torus'} />
       </IconWrapper>
     )
   } else if (connector === walletlink) {

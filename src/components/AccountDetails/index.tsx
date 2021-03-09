@@ -12,7 +12,7 @@ import Transaction from './Transaction'
 import { SUPPORTED_WALLETS } from '../../constants'
 import { ReactComponent as Close } from '../../assets/images/x.svg'
 import { getExplorerLink } from '../../utils'
-import { injected, walletconnect, walletlink, fortmatic, portis } from '../../connectors'
+import { injected, walletconnect, walletlink, fortmatic, portis, torus } from '../../connectors'
 import CoinbaseWalletIcon from '../../assets/images/coinbaseWalletIcon.svg'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
 import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
@@ -252,6 +252,12 @@ export default function AccountDetails({
       return (
         <IconWrapper size={16}>
           <img src={WalletConnectIcon} alt={'wallet connect logo'} />
+        </IconWrapper>
+      )
+    } else if (connector === torus) {
+      return (
+        <IconWrapper size={16}>
+          <img src={CoinbaseWalletIcon} alt={'torus wallet logo'} />
         </IconWrapper>
       )
     } else if (connector === walletlink) {
