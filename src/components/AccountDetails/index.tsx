@@ -16,6 +16,7 @@ import { injected, walletconnect, walletlink, fortmatic, portis, torus } from '.
 import CoinbaseWalletIcon from '../../assets/images/coinbaseWalletIcon.svg'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
 import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
+import TorusIcon from '../../assets/images/torus.png'
 import PortisIcon from '../../assets/images/portisIcon.png'
 import Identicon from '../Identicon'
 import { ButtonSecondary } from '../Button'
@@ -257,7 +258,7 @@ export default function AccountDetails({
     } else if (connector === torus) {
       return (
         <IconWrapper size={16}>
-          <img src={CoinbaseWalletIcon} alt={'torus wallet logo'} />
+          <img src={TorusIcon} alt={'torus wallet logo'} />
         </IconWrapper>
       )
     } else if (connector === walletlink) {

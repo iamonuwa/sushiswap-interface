@@ -8,6 +8,7 @@ import styled, { css } from 'styled-components'
 import CoinbaseWalletIcon from '../../assets/images/coinbaseWalletIcon.svg'
 import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
 import PortisIcon from '../../assets/images/portisIcon.png'
+import TorusIcon from '../../assets/images/torus.png'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
 import LatticeIcon from '../../assets/images/gridPlusWallet.png'
 import { fortmatic, injected, portis, walletconnect, walletlink, lattice, torus } from '../../connectors'
@@ -149,7 +150,7 @@ function StatusIcon({ connector }: { connector: AbstractConnector }) {
   } else if (connector === torus) {
     return (
       <IconWrapper size={16}>
-        <img src={LatticeIcon} alt={'Torus'} />
+        <img src={TorusIcon} alt={'Torus'} />
       </IconWrapper>
     )
   } else if (connector === walletlink) {
